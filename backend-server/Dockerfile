@@ -18,7 +18,7 @@ WORKDIR /var/www/html
 COPY . .
 
 # Copy the .env file (assuming it's in the same directory as the Dockerfile)
-COPY .env.docker
+COPY .env.docker .env
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
